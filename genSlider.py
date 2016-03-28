@@ -31,26 +31,31 @@
 
 import os, sys
 
+
+
+def cpFiles():
+    #os.system( 'mkdir slider' )
+    #os.system( 'cp -R templates/slider/ slider/' )
+    #os.system( 'cp -R font_versions/ slider/fonts' )
+    os.system( 'rm slider/css/fonts.css' )
+
 def fontsListToArray():
-    fontFileArray = ( os.listdir('fonts/') )
+    fontFileArray = ( os.listdir('slider/fonts/') )
     print (fontFileArray)
     return fontFileArray
 
-def writeCSS( familyName ):
-    CSSFile = open( 'font.css', 'ab+' )
-    fontFiles = fontsListToArray()
 
-    for f in fontFiles:
-        CSSFile.write( bytes( "@font-face {\n", 'UTF-8' ) )
-        CSSFile.write( bytes( '    font-family:\'' + familyName + "\';\n", 'UTF-8' ) )
-        CSSFile.write( bytes( '    src:url(\"' + f + "\") format(\'" + "\');\n", 'UTF-8'  ) )
-        CSSFile.write( bytes( '}\n\n', 'UTF-8' ) )
-
-    CSSFile.close()
+def writeCSS( familyName, f ):
+    CSSFile = open( 'slider/css/fonts.css', 'ab+' )
+    #@font-face {font-family:'familyName'; src:url("1017_experiment-latin-0.otf");}
+    CSSFile.write( bytes( "@font-face {" + '    font-family:\'' + familyName + "\';" + '    src:url(\"' + '../fonts/'+ f + "\");" + '}\n', 'UTF-8' ) )
 
 def process( familyName, imgFormat ):
     fontsListToArray()
-    writeCSS( familyName )
+    fontFiles = fontsListToArray()
+    for f in fontFiles:
+        writeCSS( familyName, f )
+        print( "Wrote version to css file..." )
 
 
 def main( argv ):
