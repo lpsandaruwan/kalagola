@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#   kaalagola v0.001 Beta
+#   kalagola v0.001 Beta
 #   genMovie.py is copyright (C) 2016, mooniak
 #
 #   Redistribution and use in source and binary forms, with or without

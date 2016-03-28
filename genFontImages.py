@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#   kaalagola v0.001 Beta
+#   kalagola v0.001 Beta
 #   genFontImages.py is copyright (C) 2016, mooniak
 #   This script generates a set of pdfs with each generated font applied to templates/pdf_template.html.
 #   Dependencies : wkhtmltopdf

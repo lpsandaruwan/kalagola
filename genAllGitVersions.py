@@ -1,7 +1,7 @@
 #!/usr/bin/python
-#   kaalagola v0.001 Beta
+#   kalagola v0.001 Beta
 #   genAllGitVersions.py is copyright (C) 2016, mooniak
-#   This script generates all the commited versions of a file in a git repo. 
+#   This script generates all the commited versions of a file in a git repo.
 #   Dependencies : git
 #   Usage : python3 gen.py -i [fileDirectory] -f [relativePathOfFiFromReposRootfileName]
 #
@@ -39,7 +39,7 @@ def crDir():
 
 #this generates log file
 def genGitLog( fileName, repoDir ):
-    os.system( 'cd ../' + repoDir + '&&git log --pretty=format:%h ' + fileName + ' > ../kaalagola/gitLog' )
+    os.system( 'cd ../' + repoDir + '&&git log --pretty=format:%h ' + fileName + ' > ../kalagola/gitLog' )
 
 #this gets an array of git hash of the specific file
 def gitLogToArray( repoDir ):

@@ -1,7 +1,9 @@
-# kaalagola
-Time traveling machine for font projects
+# KalaGola
+Time travel for font projects
 
+Im learning python, this is and excersise. Thanks @lpsandaruwan for work on Animager. Animager will merge to this and become KalaGola.
 
+Name KalaGola comes from a character in Ummagga Jataka in Buddhist Jaataka Kata. Kala Gola, ugly short man, who is married to beautiful Dikthala. He is made a slave by her he has to do all the household work. The pun is Kala means time, and Gola means companion or helper. A classic from Dikthala Kala Gola : https://www.youtube.com/watch?v=iwyg71HF8M8
 
 - Roll through git commits and generate all the versions of a file
 - Make a pdf file for each version using `wkhtmltopdf`. Files for the tamplate for pdf is in `/template`
