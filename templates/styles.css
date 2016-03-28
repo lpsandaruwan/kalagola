@@ -1,0 +1,17 @@
+
+body {
+    font-family: 'Experiment', AdobeBlank, 'cursive';
+}
+h1 {
+    font-family: 'Experiment', serif;
+    font-size: 80px;
+    text-align: center;
+}
+p.devide {
+    font-size: 20px;
+    column-count: 3;
+}
+p.lettering {
+    font-size: 40px;
+    column-count: 3;
+}
