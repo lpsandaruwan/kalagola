@@ -13,6 +13,7 @@ import argparse
 import cv2
 import git
 import sys
+import time
 import yaml
 
 from git import Repo
@@ -122,7 +123,7 @@ fm.create_directory(CLONE_DIR)
 
 # cloning git repository
 print('KalaGola is cloning ' + REPOSITORY + ', please be patience...')
-# Repo.clone_from(GIT_URL, CLONE_DIR)
+Repo.clone_from(GIT_URL, CLONE_DIR)
 
 # Switch to branch, where font file exists
 GIT_REPO = git.Repo(CLONE_DIR)
@@ -151,6 +152,9 @@ else:
 
 # iterate though commits and capture all html file views
 for commit in COMMITS:
+    if COMMIT_INDEX % INTERVAL is 0:
+        time.sleep(1)
+
     print('Checkout ' + str(commit.message) + ' by ' + str(commit.author))
     GIT_REPO.git.checkout(commit)
 
@@ -184,7 +188,7 @@ video_file = cv2.VideoWriter(
     'videos/' + NAME + '.avi', fourcc, 20.0, (width,height)
 )
 
-for index in range(1, 48 + 1):
+for index in range(1, len(COMMITS) + 1):
     image_file = 'temp/' + str(index) + '.png'
 
     if fm.is_file_exists(image_file):
