@@ -1,56 +1,25 @@
-# KalaGola
-Time travel for font projects
+# KalaGola - කාලගෝල
 
-Im learning python, this is and excersise. Thanks @lpsandaruwan for work on Animager. Animager will merge to this and become KalaGola.
+KalaGola is here to help you to traverse and track every single commit you have 
+made on a typeface and give you a video file to see the beauty of it.
 
-Name KalaGola comes from a character in Ummagga Jataka in Buddhist Jaataka Kata. Kala Gola, ugly short man, who is married to beautiful Dikthala. He is made a slave by her he has to do all the household work. The pun is Kala means time, and Gola means companion or helper. A classic from Dikthala Kala Gola : https://www.youtube.com/watch?v=iwyg71HF8M8
+##### Requirements
+You might need to install openCV centric libraries to get KalaGola serving. 
+Please not that Kalagola is written and tested using Python 3 only.
 
-- Roll through git commits and generate all the versions of a file
-- Make a pdf file for each version using `wkhtmltopdf`. Files for the tamplate for pdf is in `/template`
-- Convert pdf to jpg using imagemagick
-- Make a movei using ffmepg
-
-
-
-##Prepare your Repo and files
-
-TODO: Write prep instructions.
-
-###Install dependencies
-
-- git
-- wkhtmltopdf
-- imagemagick
-- ffmpeg
-
-##Grab all the versions of a font file with `genAllGitVersions.py`
-
-```
-python3 genAllGitVersions.py -F [familyName] -d [repoDirectory]
-
-
+```bash
+pip3 install -r requirements.txt
 ```
 
+##### Run KalaGola
+Simply run `python3 kalagola.py -h` to get help. Or just edit the config
+.yaml file as you want and just run `python3 kalagola.py`. If you provide 
+arguments while calling the KalaGola, it will simply override the default 
+settings.
 
-##Generate images with `genFontImages`
-
-```
-
-python3 genFontImages.py -f [familyName] -i [imageFormat]
-
-```
-
-`[familyName]` This determines the family name on the generated CSS.
-` [imageFormat] ` Any format that wkhtmltoimage supports. `jpg`, `jpeg`, `png` and more.
-
-`python3 genFontImages.py -f Experiment -i pdf`
-
-TODO: Range selector for date and time
-TODO: Git hash list input
-
-##Genrating movie with `genMovie.py`
+##### Releases
+KalaGola will release the binaries for Mac, Linux, Windows ASAP.
 
 
-```
- python3 genMovie.py -r 10 -N movie
-```
+Credits: Pathum Egodawaththa, Lahiru Pathirage<br>
+Licence: GPLv3
