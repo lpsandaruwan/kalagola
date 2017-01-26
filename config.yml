@@ -1,0 +1,9 @@
+name: myfont
+assets_dir: template/assets
+branch: gh-pages
+font_file: fonts/AbhayaLibre-Regular.otf
+index_file: template/index.html
+interval: 100
+repository: abhaya-libre-font
+stylesheet: template/assets/stylesheet.css
+user: mooniak

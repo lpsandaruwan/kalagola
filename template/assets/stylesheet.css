@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "My Font";
+    src: url('myfont') format("woff");
+}
+
+body {
+    background-color: white;
+    font-family: "My Font", serif;
+}
+
+h1 {
+    font-family: "My Font", serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+p.devide {
+    font-size: 20px;
+    column-count: 3;
+}
+
+p.lettering {
+    font-size: 40px;
+    column-count: 3;
+}

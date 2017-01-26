@@ -1,0 +1,6 @@
+argparse
+gitpython
+images2video
+opencv-python
+pyyaml
+weasyprint
