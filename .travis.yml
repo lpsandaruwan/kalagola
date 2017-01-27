@@ -11,8 +11,6 @@ before_install:
 - pyenv local 3.5.3
 - pyenv rehash
 - python --version
-- brew tap homebrew/science
-- brew install opencv3 --with-contrib --with-python3 --HEAD
 - pip3 install -r requirements.txt
 - pip3 install pyinstaller
 - pyinstaller --onefile fms.py
