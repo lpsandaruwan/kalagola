@@ -21,5 +21,9 @@ settings.
 KalaGola will release the binaries for Mac, Linux, Windows ASAP.
 
 
-Credits: Pathum Egodawaththa, Lahiru Pathirage<br>
+##### Docs
+Please refer here, [https://lpsandaruwan.github.io/archive/2017/01/26/KalaGola-%E0%B6%9A%E0%B7%8F%E0%B6%BD%E0%B6%9C%E0%B7%9D%E0%B6%BD.html](https://lpsandaruwan.github.io/archive/2017/01/26/KalaGola-%E0%B6%9A%E0%B7%8F%E0%B6%BD%E0%B6%9C%E0%B7%9D%E0%B6%BD.html)
+
+
+Credits: Pathum Egodawatta, Lahiru Pathirage<br>
 Licence: GPLv3
