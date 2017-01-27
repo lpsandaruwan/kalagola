@@ -1,0 +1,34 @@
+language: objective-c
+python:
+- 3.5.3
+before_install:
+- brew unlink pyenv
+- brew install pyenv
+- export PYENV_ROOT=/usr/local/opt/pyenv
+- eval "$(pyenv init -)"
+- "$SHELL -l"
+- env PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.5.3
+- pyenv local 3.5.3
+- pyenv rehash
+- python --version
+- brew install opencv3 --with-contrib --with-python3 --HEAD
+- pip3 install -r requirements.txt
+- pip3 install pyinstaller
+- pyinstaller --onefile fms.py
+- mkdir kalagola
+- cp -rv dist/kalagola config.yml template LICENSE README.md kalagola/
+- tar -zcvf kalagola-darwin-x64.tar.gz kalagola
+- ls
+install: true
+deploy:
+  overwrite: true
+  provider: releases
+  skip_cleanup: true
+  file:
+  - kalagola-darwin-x64.tar.gz
+  on:
+    tags: true
+    all_branches: true
+    repo: lpsandaruwan/kalagola
+  api-key:
+    secure: jbHuerYL/pnv4krpkDiXisjTfKdoGdud91+WNc+PoERk5ZndmweMHS6+09Zr8m04lVWGwb2Gv24HBEM9WtV9nm0puaHVRX2qqgnfU9YQfeXhHkmI9fw6ho1P1080Jw6mvZ9Ruc3gJrCrf8D2CvB339J85TPSPxQsy1w2w9xqlYFo5/ddHOFO27LzMRNG5VgYnsx7muMoo88Far6pIh50BPWucxPbc8MbyyuOhK7Yr4q9+w5PH+LxH4x7SW4z5rYWWLrIVhmEeGKdoya2rFa8oA3GMqZ7K0XTpwc1El5MLPDXJ5Px4yDqNc1uFjbfSLu9R2ILkQqUzdqD7KsklCKlSaDKwdZz9NGZihqBbxeg5D8OxnIc95MDqWmkX+UZ4PNnTleSf3iPABhXuQ6B6p08gi6/FJig55Wknhobfn0HhSP6n1PkoKofPUNCKH51zWW1O5oTwPIl/qVsnXCa7/ZLymGbgjVvOOdnuB/r0AjHmI7R2duEpxsXmHXHc/v0bfgY8VHUSXb7dRIvlNLXwmtaEq4wLpLMzJvFzYYsDHuQnTjBuDTZkkQiWAV1m3eD1gX8+MuBoHMVS93Jq4MFhQpm+b+U1XCQtO+xXa19GiO4Vu8xbuPmaZKMP85AnjkLaVokLq5imiPegHcCSDjY/oVaOcAJ1KGcdQfPWTTY4CYb2yU=
